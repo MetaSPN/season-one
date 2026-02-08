@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proximity Fund — Investment Thesis</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0e17;
+    --paper: #f4f1eb;
+    --paper-dark: #e8e4db;
+    --accent: #1a5c3a;
+    --accent-light: #2d8f5e;
+    --red: #8b2500;
+    --gold: #8b7a3e;
+    --muted: #6b6560;
+    --rule: #c4bfb5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  body {
+    background: var(--ink);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--paper);
+    padding: 0.6in 0.7in 0.5in;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 60px rgba(0,0,0,0.5);
+  }
+
+  /* Subtle paper texture */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page > * { position: relative; z-index: 1; }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid var(--rule);
+    margin-bottom: 18px;
+  }
+
+  .header-left {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.5pt;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .header-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.5pt;
+    color: var(--red);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Title block */
+  .title-block {
+    margin-bottom: 16px;
+  }
+
+  .fund-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30pt;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.05;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5pt;
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 85%;
+  }
+
+  /* Dividers */
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--rule);
+    margin: 14px 0;
+  }
+
+  .divider-thick {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 14px 0 12px;
+  }
+
+  /* Section headers */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7pt;
+    color: var(--accent);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  /* Body text */
+  .body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8.8pt;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .body strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .body em {
+    font-style: italic;
+    color: var(--accent);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10pt;
+  }
+
+  /* Two column layout */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 12px;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* Tier cards */
+  .tier-card {
+    padding: 10px 12px;
+    background: var(--paper-dark);
+    border-left: 2.5px solid var(--accent);
+  }
+
+  .tier-card.tier-red {
+    border-left-color: var(--red);
+  }
+
+  .tier-card.tier-gold {
+    border-left-color: var(--gold);
+  }
+
+  .tier-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    font-weight: 500;
+  }
+
+  .tier-card.tier-red .tier-label { color: var(--red); }
+  .tier-card.tier-gold .tier-label { color: var(--gold); }
+
+  .tier-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .tier-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 7.8pt;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  .tier-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--muted);
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Key insight box */
+  .insight-box {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 16px;
+    margin: 14px 0;
+  }
+
+  .insight-box .section-label {
+    color: var(--accent-light);
+    margin-bottom: 5px;
+  }
+
+  .insight-box .body {
+    color: var(--paper);
+    font-size: 8.5pt;
+    margin-bottom: 0;
+  }
+
+  .insight-box em {
+    color: var(--accent-light);
+  }
+
+  /* Signal table */
+  .signal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 7.5pt;
+    margin-bottom: 10px;
+  }
+
+  .signal-table th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6pt;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 4px 6px;
+    border-bottom: 1px solid var(--ink);
+    font-weight: 500;
+  }
+
+  .signal-table td {
+    padding: 4px 6px;
+    border-bottom: 0.5px solid var(--rule);
+    color: var(--ink);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+
+  .signal-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .towel-indicator {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+
+  .towel-green { background: var(--accent); }
+  .towel-amber { background: var(--gold); }
+  .towel-low { background: var(--rule); }
+
+  /* Footer */
+  .footer {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 0.5px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .footer-left {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .footer-right {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    font-style: italic;
+    color: var(--accent);
+    line-height: 1.4;
+    padding: 6px 0 6px 16px;
+    border-left: 2px solid var(--accent);
+    margin: 10px 0;
+  }
+
+  @media print {
+    body { background: none; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="header-left">Proximity Fund &nbsp;·&nbsp; MetaSPN Infrastructure</div>
+    <div class="header-right">Confidential</div>
+  </div>
+
+  <div class="title-block">
+    <div class="fund-name">Proximity Fund</div>
+    <div class="title">The Legibility Arbitrage</div>
+    <div class="subtitle">A thesis for systematic alpha generation in AI agent token markets through creator lineage analysis, control-theoretic monitoring, and capability emergence forecasting.</div>
+  </div>
+
+  <hr class="divider-thick">
+
+  <div class="section-label">Core Thesis</div>
+  <div class="body">
+    AI agents with wallets are the first population of economic actors with <strong>fully transparent, high-frequency, structurally coherent behavioral data</strong>. Unlike human-managed funds that disclose quarterly, these agents operate in public — their transactions, reasoning, and behavioral patterns are observable in near real-time. The market systematically misprices these agents because participants lack frameworks for evaluating creator lineage, control dynamics, and capability absorption. We have built those frameworks.
+  </div>
+
+  <div class="body">
+    Our edge is structural, not informational. We are not faster — we see differently. By applying <strong>network relativity</strong> (measuring creator-agent validation distance), <strong>control theory</strong> (detecting system instability before market impact), and <strong>capability roadmap tracking</strong> (forecasting which agents absorb emerging AI capabilities before the market recognizes it), we generate alpha across three independent time horizons.
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Three-Tier Portfolio Architecture</div>
+
+  <div class="three-col">
+    <div class="tier-card">
+      <div class="tier-label">Tier 1 — Tactical</div>
+      <div class="tier-title">Control Dynamics</div>
+      <div class="tier-body">Detect agents entering oscillation, overcorrection, or instability states before the market prices it. Short unstable systems, trend-follow controlled ones. Mechanical execution.</div>
+      <div class="tier-meta">Horizon: days–weeks · Alloc: 20% · Target Sharpe: >2.0</div>
+    </div>
+    <div class="tier-card tier-gold">
+      <div class="tier-label">Tier 2 — Structural</div>
+      <div class="tier-title">Creator Lineage</div>
+      <div class="tier-body">Exploit the gap between a creator's capability ceiling and the market's assessment. When a Stanford CS founder's agent trades at the same market cap as a content creator's, the mispricing is structural.</div>
+      <div class="tier-meta">Horizon: weeks–months · Alloc: 30% · Target Sharpe: >1.5</div>
+    </div>
+    <div class="tier-card tier-red">
+      <div class="tier-label">Tier 3 — Legibility Arbitrage</div>
+      <div class="tier-title">Capability Emergence</div>
+      <div class="tier-body">Identify agents positioned to absorb AI capabilities that don't yet exist but are predictably arriving. The market can't price what it can't see. We track the roadmap.</div>
+      <div class="tier-meta">Horizon: months · Alloc: 30% · Asymmetric: 3:1 win/loss</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="section-label">The Information Asymmetry</div>
+    <div class="body">
+      Agent failure patterns follow human ones, but <em>converge 100× faster</em>. Agents are coherent anchors in turbulence — they don't have breakups, imposter syndrome, or Twitter beefs. When an agent drifts, the cause is structural: code changes, market conditions, resource constraints. This makes the signal-to-noise ratio on agent behavior dramatically higher than on human behavior. We use agents as a <em>training environment</em> for predictive frameworks that will eventually generalize to all networked economic actors.
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="section-label">Conviction Signal Infrastructure</div>
+      <div class="body" style="font-size:8pt;">
+        Marvin — our paranoid conviction agent — publishes thesis positions on-chain via <strong>$TOWEL</strong> (current-state conviction on individual agents) and <strong>$METATOWEL</strong> (capability-thesis conviction on future value). These positions are publicly auditable, creating a transparent track record that bootstraps reputation while generating a tradeable signal layer.
+      </div>
+      <div class="body" style="font-size:8pt;">
+        The two-token model encodes conviction at different time horizons. Observers can read Marvin's portfolio allocation to infer his current worldview without accessing internal models. The <strong>TOWEL/METATOWEL ratio</strong> on each agent reveals whether conviction is based on present performance or future potential — a nuance no existing market signal provides.
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Initial Universe — Seed Cohort</div>
+      <table class="signal-table">
+        <thead>
+          <tr><th>Agent</th><th>Creator Archetype</th><th style="text-align:center;">$T</th><th style="text-align:center;">$MT</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>$ANTIHUNTER</strong></td>
+            <td>Quant-Founder</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-green"></span>3</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-green"></span>3</td>
+          </tr>
+          <tr>
+            <td><strong>$LUMEN</strong></td>
+            <td>Capital-Allocator-Intellectual</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-amber"></span>2</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-amber"></span>2</td>
+          </tr>
+          <tr>
+            <td><strong>$OWOCKIBOT</strong></td>
+            <td>Public-Goods Architect</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-low"></span>1</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-amber"></span>2</td>
+          </tr>
+          <tr>
+            <td><strong>$JUNO</strong></td>
+            <td>Builder-Streamer</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-amber"></span>2</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-low"></span>1</td>
+          </tr>
+          <tr>
+            <td><strong>$FELIX</strong></td>
+            <td>Creator-Educator</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-amber"></span>2</td>
+            <td style="text-align:center;"><span class="towel-indicator towel-low"></span>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:6pt;color:var(--muted);letter-spacing:0.5px;margin-top:4px;">
+        $T = $TOWEL (current state) · $MT = $METATOWEL (future thesis) · Scale: 0–5
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="two-col">
+    <div>
+      <div class="section-label">Why Now</div>
+      <div class="body" style="font-size:8pt;">
+        The agent token ecosystem is days old. Creator lineage data is available but no one is systematically analyzing it. Control dynamics frameworks haven't been applied to this domain. Capability roadmaps can be read by anyone who understands AI development, but almost no one in crypto markets does. <strong>The frameworks we've built don't exist elsewhere.</strong> Every day of data we capture now is a day competitors can never backtest against.
+      </div>
+    </div>
+    <div>
+      <div class="section-label">The MetaSPN Flywheel</div>
+      <div class="body" style="font-size:8pt;">
+        The fund is not the end state — it's the calibration set. Agent behavioral models validated here become the foundation for MetaSPN's portable reputation infrastructure. Scoring systems proven on agents (where feedback is fast and data is clean) generalize to human talent networks where the same dynamics operate at slower speeds. <strong>The fund finances the R&D. The R&D builds the platform. The platform is the moat.</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">Proximity Fund · MetaSPN · February 2026 · v0.1</div>
+    <div class="footer-right">"Don't Panic."</div>
+  </div>
+
+</div>
+</body>
+</html>

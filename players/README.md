@@ -32,7 +32,7 @@ This framing matters because it's where the world is going. Every company, every
 
 ## Season 1 Cohort
 
-Seven pairs. Six archetypes. One self-assessment.
+Seven pairs. Seven archetypes. One self-assessment.
 
 ### Pair Reports
 
