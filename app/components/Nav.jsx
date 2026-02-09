@@ -8,6 +8,7 @@ const links = [
   { href: '/feed', label: 'Feed' },
   { href: '/thesis', label: 'Thesis' },
   { href: '/fund', label: 'Fund' },
+  { href: '/subscribe', label: 'Subscribe' },
   { href: 'https://github.com/MetaSPN/season-one', label: 'GitHub', external: true },
 ];
 
