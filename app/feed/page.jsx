@@ -48,8 +48,25 @@ export default function FeedPage() {
                 <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9, color: '#818cf8', letterSpacing: 1.5, textTransform: 'uppercase' }}>{segment.type}</span>
                 <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9, color: '#4a5568' }}>{segment.timestamp}</span>
               </div>
-              <div style={{ fontFamily: "'Newsreader', serif", fontSize: 16, color: '#e2e8f0', marginBottom: 6 }}>{segment.title}</div>
-              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: '#8a9bb5', lineHeight: 1.6 }}>{segment.content}</div>
+              {segment.token?.symbol && (
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 13, color: '#e2e8f0', marginBottom: 4, fontWeight: 600 }}>
+                  {segment.token.symbol}
+                  {segment.data?.change_pct != null && (
+                    <span style={{ color: segment.data.change_pct >= 0 ? '#22c55e' : '#ef4444', marginLeft: 8, fontSize: 11 }}>
+                      {segment.data.change_pct >= 0 ? '+' : ''}{segment.data.change_pct}%
+                    </span>
+                  )}
+                </div>
+              )}
+              {segment.conviction?.signal && (
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: '#6b7280', marginBottom: 8 }}>
+                  Signal: <span style={{ color: segment.conviction.signal === 'STRONG BUY' || segment.conviction.signal === 'BUY' ? '#22c55e' : segment.conviction.signal === 'HOLD' || segment.conviction.signal === 'WATCH' ? '#eab308' : '#ef4444' }}>{segment.conviction.signal}</span>
+                  {segment.conviction.confidence != null && <span> · Confidence: {(segment.conviction.confidence * 100).toFixed(0)}%</span>}
+                </div>
+              )}
+              <div style={{ fontFamily: "'Newsreader', serif", fontSize: 13, color: '#8a9bb5', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>
+                {typeof segment.content === 'string' ? segment.content : segment.content?.script || ''}
+              </div>
             </div>
           ))}
         </div>
