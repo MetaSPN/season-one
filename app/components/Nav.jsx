@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 
 const links = [
   { href: '/', label: 'Scoreboard' },
+  { href: '/stream', label: '▶ Stream' },
   { href: '/feed', label: 'Feed' },
   { href: '/thesis', label: 'Thesis' },
   { href: '/fund', label: 'Fund' },
