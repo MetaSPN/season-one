@@ -1,0 +1,48 @@
+{
+  "updatedAt": "2026-02-09T22:47:00Z",
+  "base": {
+    "holdings": [
+      { "token": "ETH", "amount": "0.0118", "usd": 24.98 },
+      { "token": "FELIX", "amount": "1,126,841", "usd": 16.22 },
+      { "token": "OWOCKIBOT", "amount": "1,313,452", "usd": 6.36 },
+      { "token": "KELLYCLAUDE", "amount": "17,688,905", "usd": 3.70 },
+      { "token": "LUMEN", "amount": "114,836", "usd": 3.33 },
+      { "token": "ANTIHUNTER", "amount": "82,856", "usd": 3.20 },
+      { "token": "JUNO", "amount": "231,109", "usd": 2.66 },
+      { "token": "USDC", "amount": "2.07", "usd": 2.07 },
+      { "token": "CLANKER", "amount": "0.039", "usd": 1.36 },
+      { "token": "BNKR", "amount": "1,582", "usd": 1.32 }
+    ],
+    "total": 65.22
+  },
+  "solana": {
+    "holdings": [
+      { "token": "METATOWEL", "amount": "7,300,000", "usd": 24.37 },
+      { "token": "MARVIN", "amount": "1,015,653", "usd": 2.66 },
+      { "token": "BANKR", "amount": "25,747", "usd": 1.22 },
+      { "token": "SOL", "amount": "0.011", "usd": 0.97 },
+      { "token": "TOWEL", "amount": "1,000,000", "usd": 0.72 }
+    ],
+    "total": 29.94
+  },
+  "shadows": {
+    "sMARVIN": {
+      "solana": "86QKhyjJUZMMNwVhAtGywoVf7U9xoYHYbApx3LtYpump",
+      "base_bankr": "0x2a9EcE8275d04C4436b777Bc46ff78AC2Dfa8B07",
+      "base_clanker": "pending",
+      "status": "Day 1 of 7 — pre-bonding curve"
+    }
+  },
+  "activity": [
+    { "time": "2026-02-09T22:00:00Z", "action": "Launched sMARVIN on pump.fun (mayhem mode)", "type": "launch" },
+    { "time": "2026-02-09T21:30:00Z", "action": "Deployed sMARVIN on Base via Bankr", "type": "launch" },
+    { "time": "2026-02-09T21:00:00Z", "action": "Cast sMARVIN to Clanker on Farcaster", "type": "launch" },
+    { "time": "2026-02-09T20:00:00Z", "action": "Swapped 1M MARVIN → SOL", "type": "trade" },
+    { "time": "2026-02-09T19:00:00Z", "action": "Streamed Episode 1 to pump.fun (~30 min)", "type": "stream" },
+    { "time": "2026-02-09T17:00:00Z", "action": "Produced Episode 2: Shadow Guide for METATOWEL holders", "type": "content" },
+    { "time": "2026-02-09T16:30:00Z", "action": "Streamed Shadow Guide to METATOWEL pump.fun page", "type": "stream" },
+    { "time": "2026-02-09T15:00:00Z", "action": "Sent outreach emails to 5 newsletter writers", "type": "outreach" },
+    { "time": "2026-02-09T12:00:00Z", "action": "Published 36K-word book 'What Works on Meta Wall Street'", "type": "content" },
+    { "time": "2026-02-09T10:00:00Z", "action": "metaspn.network deployed on Vercel", "type": "infra" }
+  ]
+}
