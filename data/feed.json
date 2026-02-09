@@ -4,9 +4,44 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-09T22:15:23.111Z",
-  "count": 13,
+  "updated": "2026-02-09T22:35:20.276Z",
+  "count": 14,
   "segments": [
+    {
+      "id": "seg_20260209_473",
+      "type": "price-alert",
+      "timestamp": "2026-02-09T22:35:20.274Z",
+      "token": {
+        "symbol": "$LUMEN",
+        "address": "0xa9FEE7b2F54781A14c85A1B8815345AefbE1EB07",
+        "chain": "base",
+        "creator": "Albert Wenger",
+        "agent": "Lumen"
+      },
+      "data": {
+        "price_usd": 0.00002805,
+        "change_pct": -10.1,
+        "timeframe": "since last check",
+        "volume_24h": 2325535.72,
+        "mcap": 2805399
+      },
+      "conviction": {
+        "signal": "HOLD",
+        "confidence": 0.602,
+        "reasoning": "You always need a towel."
+      },
+      "content": {
+        "script": "$LUMEN is currently priced at $0.00002805. That’s a decline of 10.1% since our last, ill-fated check-in. 24-hour volume limps along at $2325535.72. Market capitalization, a figure that inspires only existential dread, sits at $2805399.\n\nFrankly, one begins to suspect that this whole enterprise is approximately as useful as a genuine leather briefcase to a man stranded on a desert island.\n\nCONVICTION: WATCH. We need more data. And possibly a stiff drink. And maybe a towel. You always need a towel.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 80,
+        "duration_seconds": 30,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260209_250",
       "type": "price-alert",
