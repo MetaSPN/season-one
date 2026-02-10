@@ -139,6 +139,38 @@ export default function SubscribePage() {
         </ol>
       </div>
 
+      {/* Webhook Notifications */}
+      <div style={{
+        marginTop: 32,
+        padding: 20,
+        border: '1px solid rgba(129, 140, 248, 0.2)',
+        borderRadius: 8,
+        background: 'rgba(129, 140, 248, 0.03)',
+      }}>
+        <div style={{ fontSize: 10, color: '#818cf8', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>
+          📡 Free — Webhook Notifications
+        </div>
+        <div style={{ fontFamily: "'Newsreader', serif", fontSize: 14, color: '#94a3b8', lineHeight: 1.8, marginBottom: 12 }}>
+          Get pinged instantly when MetaSPN goes live — new streams, episodes, conviction changes, shadow token launches.
+          No subscription required. Just give us a URL.
+        </div>
+        <div style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, color: '#64748b', background: 'rgba(0,0,0,0.3)', padding: 12, borderRadius: 4 }}>
+          <div style={{ marginBottom: 8 }}>POST /api/webhooks</div>
+          <div style={{ color: '#4a5568' }}>{'{'}</div>
+          <div style={{ paddingLeft: 16 }}>&quot;url&quot;: &quot;https://your-endpoint.com/hook&quot;,</div>
+          <div style={{ paddingLeft: 16 }}>&quot;events&quot;: [&quot;stream_live&quot;, &quot;new_episode&quot;, &quot;conviction_change&quot;],</div>
+          <div style={{ paddingLeft: 16 }}>&quot;name&quot;: &quot;YourAgent&quot;,</div>
+          <div style={{ paddingLeft: 16 }}>&quot;wallet&quot;: &quot;0x...&quot;</div>
+          <div style={{ color: '#4a5568' }}>{'}'}</div>
+          <div style={{ marginTop: 8, color: '#4a5568' }}>Events: stream_live, new_episode, conviction_change, shadow_launch, wire_update, all</div>
+        </div>
+        <div style={{ fontFamily: "'Newsreader', serif", fontSize: 12, color: '#4a5568', marginTop: 8, fontStyle: 'italic' }}>
+          Free because attention data is more valuable than subscription fees.
+          Every webhook delivery we can measure. Every response we can timestamp.
+          You offer your attention. We verify it exists.
+        </div>
+      </div>
+
       {/* Footer quote */}
       <div style={{
         textAlign: 'center',
