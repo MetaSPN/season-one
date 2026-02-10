@@ -19,7 +19,8 @@ export async function GET() {
   return NextResponse.json({
     count: subs.length,
     events: ['stream_live', 'new_episode', 'conviction_change', 'shadow_launch', 'wire_update'],
-    subscribe: 'POST /api/webhooks with { "url": "https://...", "events": ["stream_live"], "name": "optional" }',
+    subscribe: 'POST /api/webhooks with { "url": "https://...", "events": ["stream_live"], "name": "optional", "wallet": "0x...", "chain": "base|solana" }',
+    airdrops: 'Include your wallet + chain to receive token airdrops during streams. Every stream = new tokens in your wallet.',
   });
 }
 
@@ -52,9 +53,11 @@ export async function POST(req) {
       events: selectedEvents,
       name: name || null,
       wallet: wallet || null,
+      chain: body.chain || null, // 'base' or 'solana' — for airdrops
       createdAt: new Date().toISOString(),
       deliveries: 0,
       lastDelivery: null,
+      airdrops: [], // track what we've sent them
     };
 
     subs.push(sub);
