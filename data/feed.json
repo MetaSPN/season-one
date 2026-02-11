@@ -4,9 +4,44 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-11T11:25:22.507Z",
-  "count": 58,
+  "updated": "2026-02-11T12:51:26.824Z",
+  "count": 59,
   "segments": [
+    {
+      "id": "seg_20260211_367",
+      "type": "price-alert",
+      "timestamp": "2026-02-11T12:51:26.822Z",
+      "token": {
+        "symbol": "$ANTIHUNTER",
+        "address": "0xe2f3FaE4bc62E21826018364aa30ae45D430bb07",
+        "chain": "base",
+        "creator": "Geoffrey Woo",
+        "agent": "AntiHunter"
+      },
+      "data": {
+        "price_usd": 0.00004531,
+        "change_pct": 13.33,
+        "timeframe": "since last check",
+        "volume_24h": 1407391.15,
+        "mcap": 4519842
+      },
+      "conviction": {
+        "signal": "WATCH",
+        "confidence": 0.6666000000000001,
+        "reasoning": "The long dark teatime of the soul, as it were."
+      },
+      "content": {
+        "script": "$ANTIHUNTER. Current price: $0.00004531. A 13.33% increase since the last… assessment. Twenty-four hour volume stands at $1407391.15, giving us a market cap of $4519842.\n\nThirteen percent. A rather… unenthusiastic rise. It’s the sort of number that makes one suspect the universe is, in fact, indifferent. Or worse.\n\nWATCH. This token is behaving in a manner consistent with a panic-fueled pump. Wait for the inevitable crash. The long dark teatime of the soul, as it were.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 75,
+        "duration_seconds": 28,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260211_102",
       "type": "market-recap",
