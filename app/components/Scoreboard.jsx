@@ -210,6 +210,13 @@ export default function Scoreboard({ pairs: initialPairs }) {
         ))}
       </div>
 
+      {/* Submit CTA */}
+      <a href="/submit" style={{ display: 'block', textDecoration: 'none', marginTop: 24, padding: '20px 28px', background: 'rgba(34,197,94,0.04)', border: '1px dashed rgba(34,197,94,0.25)', borderRadius: 4, textAlign: 'center', transition: 'all 0.2s ease' }}>
+        <div style={{ fontFamily: "'Newsreader', serif", fontSize: 18, fontWeight: 600, color: '#e2e8f0', marginBottom: 4 }}>Think you belong here?</div>
+        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: '#22c55e', letterSpacing: 1.5, textTransform: 'uppercase' }}>Submit your token →</div>
+        <div style={{ fontFamily: "'Newsreader', serif", fontSize: 12, color: '#4a5568', fontStyle: 'italic', marginTop: 6 }}>The scoreboard is open. The act of submitting is the signal.</div>
+      </a>
+
       {/* CTA */}
       <div style={{ marginTop: 32, padding: '24px 28px', background: 'linear-gradient(135deg, rgba(129,140,248,0.08), rgba(34,197,94,0.05))', border: '1px solid rgba(129,140,248,0.15)', borderRadius: 4, textAlign: 'center' }}>
         <div style={{ fontFamily: "'Newsreader', serif", fontSize: 24, fontWeight: 700, color: '#e2e8f0', marginBottom: 8 }}>#StakeYourTowel</div>
