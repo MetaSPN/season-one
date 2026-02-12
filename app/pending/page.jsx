@@ -2,11 +2,13 @@ import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import Link from 'next/link';
 
-const STATUS_COLORS = {
+const TIER_COLORS = {
   pending: '#eab308',
-  approved: '#22c55e',
-  rejected: '#ef4444',
+  tracked: '#60a5fa',
+  scored: '#818cf8',
+  ranked: '#22c55e',
 };
+const STATUS_COLORS = TIER_COLORS;
 
 export default function PendingPage() {
   const dataPath = join(process.cwd(), 'data', 'submissions.json');
@@ -55,10 +57,15 @@ export default function PendingPage() {
                       fontFamily: "'IBM Plex Mono', monospace", fontSize: 8, letterSpacing: 1.5, textTransform: 'uppercase',
                       padding: '2px 6px', background: 'rgba(255,255,255,0.04)', borderRadius: 2,
                       color: STATUS_COLORS[s.status] || '#6b7280',
-                    }}>{s.status}</span>
+                    }}>{s.tier || s.status}</span>
                     <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9, color: '#4a5568', letterSpacing: 0.5 }}>
                       {s.tokenChain}
                     </span>
+                    {s.shippingVelocity > 0 && (
+                      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 8, letterSpacing: 1, padding: '2px 6px', background: 'rgba(129,140,248,0.1)', borderRadius: 2, color: '#818cf8' }}>
+                        SV {s.shippingVelocity}
+                      </span>
+                    )}
                   </div>
                   <div style={{ fontFamily: "'Newsreader', serif", fontSize: 18, fontWeight: 600, color: '#e2e8f0' }}>
                     ${s.tokenSymbol}

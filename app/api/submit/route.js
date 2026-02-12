@@ -40,10 +40,25 @@ export async function POST(request) {
     const submissions = readSubmissions();
     const maxId = submissions.reduce((max, s) => Math.max(max, s.id || 0), 0);
 
+    // Check for duplicate
+    const existing = submissions.find(
+      (s) => s.tokenAddress === body.tokenAddress && s.tokenChain === body.tokenChain
+    );
+    if (existing) {
+      return NextResponse.json(
+        { error: 'Token already submitted', existingId: existing.id, status: existing.tier },
+        { status: 409 }
+      );
+    }
+
     const entry = {
       id: maxId + 1,
       submittedAt: new Date().toISOString(),
+      lastUpdated: new Date().toISOString(),
       status: 'pending',
+      tier: 'pending',
+      shippingVelocity: 0,
+      svLastUpdated: null,
       tokenAddress: body.tokenAddress,
       tokenChain: body.tokenChain,
       tokenSymbol: body.tokenSymbol.toUpperCase(),
@@ -54,6 +69,7 @@ export async function POST(request) {
       description: body.description || null,
       website: body.website || null,
       submitterWallet: body.submitterWallet || null,
+      updates: [],
     };
 
     submissions.push(entry);
