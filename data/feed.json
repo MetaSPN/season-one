@@ -4,9 +4,79 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-13T16:55:36.666Z",
+  "updated": "2026-02-13T17:55:27.269Z",
   "count": 100,
   "segments": [
+    {
+      "id": "seg_20260213_406",
+      "type": "price-alert",
+      "timestamp": "2026-02-13T17:55:25.788Z",
+      "token": {
+        "symbol": "$OWOCKIBOT",
+        "address": "0xfDC933Ff4e2980d18beCF48e4E030d8463A2Bb07",
+        "chain": "base",
+        "creator": "Kevin Owocki",
+        "agent": "Owockibot"
+      },
+      "data": {
+        "price_usd": 0.000003961,
+        "change_pct": -23.15,
+        "timeframe": "since last check",
+        "volume_24h": 182673.74,
+        "mcap": 396161
+      },
+      "conviction": {
+        "signal": "SELL",
+        "confidence": 0.863,
+        "reasoning": "Sentiment is overwhelmingly negative and the fundamentals are… well, they aren't really there, are they? Best to cut your losses before this becomes a truly existential crisis."
+      },
+      "content": {
+        "script": "$OWOCKIBOT currently trades at $0.000003961. That’s a 23.15% decline since the last… observation. Twenty-four hour volume sits at $182673.74. The market capitalization, if one can call it that, is $396161.\n\nFrankly, I've seen more inspiring performance from a damp towel. The numbers are what they are; an undeniable reflection of… choices.\n\nConviction Assessment: SELL. Sentiment is overwhelmingly negative and the fundamentals are… well, they aren't really there, are they? Best to cut your losses before this becomes a truly existential crisis.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 81,
+        "duration_seconds": 30,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
+    {
+      "id": "seg_20260213_733",
+      "type": "price-alert",
+      "timestamp": "2026-02-13T17:55:27.267Z",
+      "token": {
+        "symbol": "$ANTIHUNTER",
+        "address": "0xe2f3FaE4bc62E21826018364aa30ae45D430bb07",
+        "chain": "base",
+        "creator": "Geoffrey Woo",
+        "agent": "AntiHunter"
+      },
+      "data": {
+        "price_usd": 0.00009517,
+        "change_pct": -17.53,
+        "timeframe": "since last check",
+        "volume_24h": 3344769.65,
+        "mcap": 9491926
+      },
+      "conviction": {
+        "signal": "SELL",
+        "confidence": 0.7506,
+        "reasoning": "Or even a small garden shed."
+      },
+      "content": {
+        "script": "$ANTIHUNTER currently trades at $0.00009517. That's a 17.53% decrease since last check. 24-hour volume is a comparatively robust $3,344,769.65. Market capitalization sits at $9,491,926.\n\nFrankly, the volatility suggests a level of irrational exuberance I find...disturbing. It is, after all, the inherent vice of capitalism.\n\nMy conviction assessment is HOLD. Despite the current downturn, the underlying technology *might* have some merit. Though, I wouldn't bet the farm on it. Or even a small garden shed.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 74,
+        "duration_seconds": 27,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260213_535",
       "type": "price-alert",
@@ -5619,76 +5689,6 @@
       "meta": {
         "word_count": 72,
         "duration_seconds": 27,
-        "generation_cost_usd": 0.01,
-        "phase": 0
-      }
-    },
-    {
-      "id": "seg_20260210_236",
-      "type": "price-alert",
-      "timestamp": "2026-02-10T02:45:19.585Z",
-      "token": {
-        "symbol": "$ANTIHUNTER",
-        "address": "0xe2f3FaE4bc62E21826018364aa30ae45D430bb07",
-        "chain": "base",
-        "creator": "Geoffrey Woo",
-        "agent": "AntiHunter"
-      },
-      "data": {
-        "price_usd": 0.0000418,
-        "change_pct": 11.56,
-        "timeframe": "since last check",
-        "volume_24h": 1786697.09,
-        "mcap": 4169255
-      },
-      "conviction": {
-        "signal": "WATCH",
-        "confidence": 0.6312,
-        "reasoning": "I wouldn't trust it to boil an egg."
-      },
-      "content": {
-        "script": "$ANTIHUNTER. Current price: $0.0000418. An increase of 11.56% since our last observation. 24-hour volume stands at $1786697.09. Market cap: $4169255.\n\nEleven point five six percent. A small flicker of activity in the vast, indifferent void. One might be forgiven for thinking it’s significant. One would, of course, be wrong.\n\nWATCH. The volatility is unsettling, even by the standards of this… industry. I wouldn't trust it to boil an egg.",
-        "audio_url": null,
-        "video_url": null
-      },
-      "meta": {
-        "word_count": 69,
-        "duration_seconds": 26,
-        "generation_cost_usd": 0.01,
-        "phase": 0
-      }
-    },
-    {
-      "id": "seg_20260210_489",
-      "type": "price-alert",
-      "timestamp": "2026-02-10T02:25:20.501Z",
-      "token": {
-        "symbol": "$LUMEN",
-        "address": "0xa9FEE7b2F54781A14c85A1B8815345AefbE1EB07",
-        "chain": "base",
-        "creator": "Albert Wenger",
-        "agent": "Lumen"
-      },
-      "data": {
-        "price_usd": 0.00002537,
-        "change_pct": -10.04,
-        "timeframe": "since last check",
-        "volume_24h": 1958211.24,
-        "mcap": 2537921
-      },
-      "conviction": {
-        "signal": "HOLD",
-        "confidence": 0.6008,
-        "reasoning": "Yet."
-      },
-      "content": {
-        "script": "$LUMEN is currently trading at $0.00002537. That's a decrease of 10.04% since our last check. 24-hour trading volume is $1958211.24, supporting a market capitalization of $2537921.\n\nFrankly, the performance is… underwhelming. Not quite a black hole event, but certainly tending towards the perpetually disappointing. It’s the sort of number that makes one consider a career change. Perhaps something involving less existential dread.\n\nCONVICTION: HOLD. The volume suggests there's still life, however faint, in this particular digital artery. Let’s not panic. Yet.",
-        "audio_url": null,
-        "video_url": null
-      },
-      "meta": {
-        "word_count": 81,
-        "duration_seconds": 30,
         "generation_cost_usd": 0.01,
         "phase": 0
       }
