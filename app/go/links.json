@@ -1,0 +1,4 @@
+{
+  "_comment": "Marvin's link tracker. slug -> {url, source, campaign}. Deploy via git push.",
+  "links": {}
+}
