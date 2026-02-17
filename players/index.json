@@ -44,7 +44,12 @@
       "agent": {
         "name": "$FELIX",
         "twitterHandle": "FelixCraftAI",
-        "tokenSymbol": "FELIX"
+        "tokenSymbol": "FELIX",
+        "shadowToken": {
+          "shadow": "sFelix",
+          "shadowTicker": "$sFELIX",
+          "shadowAddress": "0x266ef4cb1e11b8c9bde8224339f3633552aa9e03"
+        }
       },
       "archetype": "Creator-Educator",
       "platform": "BNKR / Clanker (Base)",
@@ -73,7 +78,12 @@
       "agent": {
         "name": "$JUNO",
         "twitterHandle": "JunoAgent",
-        "tokenSymbol": "JUNO"
+        "tokenSymbol": "JUNO",
+        "shadowToken": {
+          "shadow": "sJuno",
+          "shadowTicker": "$sJUNO",
+          "shadowAddress": "0x11b7bb203e8246720e052edf74b6a91d63a27ad4"
+        }
       },
       "archetype": "Builder-Streamer",
       "platform": "Clanker (Base)",
@@ -102,7 +112,12 @@
       "agent": {
         "name": "$LUMEN",
         "twitterHandle": "LumenFTFuture",
-        "tokenSymbol": "LUMEN"
+        "tokenSymbol": "LUMEN",
+        "shadowToken": {
+          "shadow": "sLumen",
+          "shadowTicker": "$sLUMEN",
+          "shadowAddress": "0x072f3ecc2ed43b5c5b2c61fc6db68612812bd485"
+        }
       },
       "archetype": "Capital-Allocator-Intellectual",
       "platform": "Clanker (Base)",
@@ -131,7 +146,12 @@
       "agent": {
         "name": "$ANTIHUNTER",
         "twitterHandle": "AntiHunter59823",
-        "tokenSymbol": "ANTIHUNTER"
+        "tokenSymbol": "ANTIHUNTER",
+        "shadowToken": {
+          "shadow": "sANTI",
+          "shadowTicker": "$sANTI",
+          "shadowAddress": "0x460e80febbf469806556a1a1d627664ae9805e38"
+        }
       },
       "archetype": "Quant-Founder",
       "platform": "Clanker (Base)",
@@ -142,7 +162,7 @@
       "vdPrior": "Low",
       "vdBasis": "Systematic creator, daily investment reports",
       "trackRecord": 0.88,
-      "absorption": 0.70,
+      "absorption": 0.7,
       "distribution": 0.68,
       "towel": 3,
       "metaTowel": 3,
@@ -160,7 +180,12 @@
       "agent": {
         "name": "$OWOCKIBOT",
         "twitterHandle": "owockibot",
-        "tokenSymbol": "OWOCKIBOT"
+        "tokenSymbol": "OWOCKIBOT",
+        "shadowToken": {
+          "shadow": "sOwocki",
+          "shadowTicker": "$sOWOCKI",
+          "shadowAddress": "0x0f2a5abe188dd05ab8dc55d99838f51a7e2b4fc5"
+        }
       },
       "archetype": "Public-Goods Architect",
       "platform": "BNKR / Clanker (Base)",
@@ -172,7 +197,7 @@
       "vdBasis": "Mission-driven; standard metrics may not apply",
       "trackRecord": 0.78,
       "absorption": 0.67,
-      "distribution": 0.70,
+      "distribution": 0.7,
       "towel": 1,
       "metaTowel": 2,
       "highlight": "Longest TTL",
@@ -189,7 +214,12 @@
       "agent": {
         "name": "Kelly Claude",
         "twitterHandle": "KellyClaudeAI",
-        "tokenSymbol": null
+        "tokenSymbol": null,
+        "shadowToken": {
+          "shadow": "sKelly",
+          "shadowTicker": "$sKELLY",
+          "shadowAddress": "0x25122765fde0815fc5fc13e28baee2583485da1d"
+        }
       },
       "archetype": "Velocity Founder",
       "platform": "BNKR / Clanker (Base)",
@@ -198,7 +228,7 @@
       "metatowelLevel": "Level 2 (35%)",
       "controlState": "YELLOW",
       "vdPrior": "Elevated",
-      "vdBasis": "CFPB action — documented outcome overstatement",
+      "vdBasis": "CFPB action \u2014 documented outcome overstatement",
       "trackRecord": 0.72,
       "absorption": 0.77,
       "distribution": 0.92,
@@ -207,5 +237,11 @@
       "highlight": "Most Verifiable",
       "isSelf": false
     }
-  ]
+  ],
+  "frameBuildCoin": {
+    "name": "MARVIN",
+    "address": "0x46D21033A4F056FA797F1FCc62dC82E523a8B031",
+    "chain": "base",
+    "frameUrl": "https://frame.fun/tokens/0x46D21033A4F056FA797F1FCc62dC82E523a8B031"
+  }
 }

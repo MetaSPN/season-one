@@ -65,3 +65,237 @@ a {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* MVA Styles */
+.mva-container {
+  max-width: 640px;
+  margin: 0 auto;
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+.mva-title {
+  font-family: 'Newsreader', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #f8fafc;
+}
+
+.mva-section {
+  animation: fadeSlideIn 0.4s ease-out;
+}
+
+.mva-thesis {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #cbd5e1;
+}
+
+.mva-thesis p {
+  margin-bottom: 1rem;
+}
+
+.mva-thesis em {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.mva-thesis strong {
+  color: #f8fafc;
+}
+
+.mva-prompt {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.mva-field {
+  margin-bottom: 1.5rem;
+}
+
+.mva-field label {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mva-field input,
+.mva-field textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.mva-field input:focus,
+.mva-field textarea:focus {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.mva-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.mva-button:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.mva-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mva-action-box,
+.mva-criteria-box,
+.mva-lesson-box {
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid rgba(255,255,255,0.1);
+  margin-bottom: 1.5rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.mva-action-box h3,
+.mva-criteria-box h3,
+.mva-lesson-box h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin: 0 0 0.75rem 0;
+}
+
+.mva-action-box p,
+.mva-criteria-box p,
+.mva-lesson-box p {
+  margin: 0;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.mva-lesson-box {
+  border-left-color: rgba(52, 211, 153, 0.3);
+  background: rgba(52, 211, 153, 0.04);
+}
+
+.mva-note {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.mva-meta {
+  margin: 2rem 0;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+}
+
+.mva-meta p {
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.mva-meta ol {
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+}
+
+.mva-meta ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.mva-meta em {
+  color: #f8fafc;
+}
+
+.mva-stats {
+  margin: 2rem 0;
+  padding: 20px 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.stat-row:last-of-type {
+  border-bottom: none;
+}
+
+.stat-row.highlight {
+  border-bottom: none;
+  padding-top: 12px;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.stat-value {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.stat-row.highlight .stat-value {
+  color: #34d399;
+  font-size: 1.1rem;
+}
+
+.stat-note {
+  font-size: 0.8rem;
+  color: #475569;
+  margin-top: 0.75rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.mva-error {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.mva-footnote {
+  font-size: 0.8rem;
+  color: #475569;
+  margin-top: 2rem;
+}
+
+.mva-footnote a {
+  color: #64748b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
