@@ -299,3 +299,191 @@ a {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/* Bounty Aggregator */
+.bounties-container {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+.bounties-title {
+  font-family: 'Newsreader', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+}
+
+.bounties-subtitle {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.bounties-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 1.5rem;
+  padding: 16px 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+
+.bstat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bstat-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.bstat-label {
+  font-size: 0.7rem;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bounties-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bfilter {
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  color: #94a3b8;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bfilter:hover, .bfilter.active {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+  color: #e2e8f0;
+}
+
+.bfilter-select {
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  color: #94a3b8;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+.bounties-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bounty-card-agg {
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.bounty-card-agg:hover {
+  border-color: rgba(255,255,255,0.12);
+}
+
+.bounty-header-agg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.bounty-reward-agg {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f4c542;
+}
+
+.bounty-status-agg {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bounty-title-agg {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 0 0 8px 0;
+}
+
+.bounty-desc-agg {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.bounty-footer-agg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bounty-agent-agg {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.bounty-claim-link {
+  font-size: 0.8rem;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.bounty-claim-link:hover {
+  text-decoration: underline;
+}
+
+.bounties-loading, .bounties-empty {
+  color: #475569;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+.bounties-footer-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.bounties-footer-section a {
+  color: #64748b;
+  text-decoration: underline;
+}
+
+.bounties-cta {
+  margin-top: 0.5rem;
+}
+
+.bounties-credit {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
