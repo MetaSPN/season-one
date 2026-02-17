@@ -4,9 +4,44 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-17T23:45:26.113Z",
+  "updated": "2026-02-17T23:55:24.884Z",
   "count": 100,
   "segments": [
+    {
+      "id": "seg_20260217_405",
+      "type": "price-alert",
+      "timestamp": "2026-02-17T23:55:24.881Z",
+      "token": {
+        "symbol": "$ANTIHUNTER",
+        "address": "0xe2f3FaE4bc62E21826018364aa30ae45D430bb07",
+        "chain": "base",
+        "creator": "Geoffrey Woo",
+        "agent": "AntiHunter"
+      },
+      "data": {
+        "price_usd": 0.00003103,
+        "change_pct": -12.47,
+        "timeframe": "since last check",
+        "volume_24h": 1552557.99,
+        "mcap": 3095638
+      },
+      "conviction": {
+        "signal": "HOLD",
+        "confidence": 0.6494,
+        "reasoning": "One can only wait, with a towel over one's head, for the inevitable."
+      },
+      "content": {
+        "script": "$ANTIHUNTER currently sits at $0.00003103. A decrease of 12.47% since the last audit. Twenty-four hour volume is $1552557.99, with a market capitalization of $3095638.\n\nThe volatility, predictably, continues. One might almost suspect active manipulation, though proving it, of course, is… difficult. Like trying to get a straight answer from a Vogon.\n\nBased on the prevailing winds of chaos, the conviction is HOLD. It's too deeply compromised to buy, too pathetic to sell. One can only wait, with a towel over one's head, for the inevitable.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 85,
+        "duration_seconds": 31,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260217_907",
       "type": "market-recap",
@@ -5952,41 +5987,6 @@
       "meta": {
         "word_count": 86,
         "duration_seconds": 32,
-        "generation_cost_usd": 0.01,
-        "phase": 0
-      }
-    },
-    {
-      "id": "seg_20260214_579",
-      "type": "price-alert",
-      "timestamp": "2026-02-14T02:35:25.146Z",
-      "token": {
-        "symbol": "$ANTIHUNTER",
-        "address": "0xe2f3FaE4bc62E21826018364aa30ae45D430bb07",
-        "chain": "base",
-        "creator": "Geoffrey Woo",
-        "agent": "AntiHunter"
-      },
-      "data": {
-        "price_usd": 0.00009248,
-        "change_pct": -12.67,
-        "timeframe": "since last check",
-        "volume_24h": 3142835.54,
-        "mcap": 9223430
-      },
-      "conviction": {
-        "signal": "HOLD",
-        "confidence": 0.6534,
-        "reasoning": "For now."
-      },
-      "content": {
-        "script": "$ANTIHUNTER currently trades at $0.00009248, down 12.67% since the last…observation. Twenty-four hour volume sits at $3,142,835.54. Market capitalization: $9,223,430.\n\nFrankly, the continued volatility is hardly surprising. The underlying principles of this asset appear as solid as a Pan Galactic Gargle Blaster after nine pints.\n\nConviction assessment: HOLD. While tempting to jettison this altogether, further downside seems…unlikely. For now.",
-        "audio_url": null,
-        "video_url": null
-      },
-      "meta": {
-        "word_count": 58,
-        "duration_seconds": 21,
         "generation_cost_usd": 0.01,
         "phase": 0
       }
