@@ -4,9 +4,42 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-20T23:15:22.375Z",
+  "updated": "2026-02-20T23:55:25.426Z",
   "count": 100,
   "segments": [
+    {
+      "id": "seg_20260220_061",
+      "type": "price-alert",
+      "timestamp": "2026-02-20T23:55:25.424Z",
+      "token": {
+        "symbol": "$VVV",
+        "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+        "chain": "base"
+      },
+      "data": {
+        "price_usd": 4.13,
+        "change_pct": -11.18,
+        "timeframe": "since last check",
+        "volume_24h": 0.22,
+        "mcap": 178194992
+      },
+      "conviction": {
+        "signal": "HOLD",
+        "confidence": 0.6236,
+        "reasoning": "The volume suggests no one is interested, and hoping for a miracle is usually a sign of advanced market dyspraxia."
+      },
+      "content": {
+        "script": "$VVV currently trades at $4.13. That’s down 11.18% since the last assessment. Twenty-four-hour volume is a paltry $0.22, and the market capitalization… well, it’s $178,194,992. A number large enough to be thoroughly depressing when you consider its performance.\n\nOne might be forgiven for thinking the market is actively trying to be unpleasant. Which, frankly, it usually is.\n\nConviction: SELL. The volume suggests no one is interested, and hoping for a miracle is usually a sign of advanced market dyspraxia.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 79,
+        "duration_seconds": 29,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260220_665",
       "type": "price-alert",
@@ -6496,41 +6529,6 @@
       "meta": {
         "word_count": 75,
         "duration_seconds": 28,
-        "generation_cost_usd": 0.01,
-        "phase": 0
-      }
-    },
-    {
-      "id": "seg_20260215_632",
-      "type": "price-alert",
-      "timestamp": "2026-02-15T00:25:23.330Z",
-      "token": {
-        "symbol": "$FELIX",
-        "address": "0xf30Bf00edd0C22db54C9274B90D2A4C21FC09b07",
-        "chain": "base",
-        "creator": "Nat Eliason",
-        "agent": "Felix"
-      },
-      "data": {
-        "price_usd": 0.00002546,
-        "change_pct": -12.15,
-        "timeframe": "since last check",
-        "volume_24h": 1191451.68,
-        "mcap": 2470948
-      },
-      "conviction": {
-        "signal": "HOLD",
-        "confidence": 0.643,
-        "reasoning": "Mostly."
-      },
-      "content": {
-        "script": "Right. $FELIX. Currently trading at $0.00002546. That's a 12.15 percent decrease since our last check. Twenty-four hour volume stands at $1191451.68. Market cap: $2470948.\n\nFrankly, it appears to be demonstrating a level of enthusiasm generally reserved for a damp towel. I've seen more life in a Vogon constructor fleet.\n\nConviction assessment: WATCH. Until we see some actual, you know, *movement*, I'm inclined to believe this is mostly harmless. Mostly.",
-        "audio_url": null,
-        "video_url": null
-      },
-      "meta": {
-        "word_count": 69,
-        "duration_seconds": 26,
         "generation_cost_usd": 0.01,
         "phase": 0
       }
