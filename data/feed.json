@@ -4,9 +4,44 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-21T03:05:22.171Z",
+  "updated": "2026-02-21T03:25:19.935Z",
   "count": 100,
   "segments": [
+    {
+      "id": "seg_20260221_976",
+      "type": "price-alert",
+      "timestamp": "2026-02-21T03:25:19.931Z",
+      "token": {
+        "symbol": "$FELIX",
+        "address": "0xf30Bf00edd0C22db54C9274B90D2A4C21FC09b07",
+        "chain": "base",
+        "creator": "Nat Eliason",
+        "agent": "Felix"
+      },
+      "data": {
+        "price_usd": 0.000009687,
+        "change_pct": -10.8,
+        "timeframe": "since last check",
+        "volume_24h": 555527.35,
+        "mcap": 936545
+      },
+      "conviction": {
+        "signal": "HOLD",
+        "confidence": 0.6160000000000001,
+        "reasoning": "This is probably a bad idea."
+      },
+      "content": {
+        "script": "$FELIX. Current price: $0.000009687. A decline of 10.8% since last check. Twenty-four hour volume: $555527.35. Market capitalization: $936545.\n\nThese numbers, viewed collectively, do not inspire confidence. In fact, they actively suggest the opposite. One begins to suspect the presence of malevolent forces at work, or perhaps just… entropy.\n\nConviction assessment: SELL. Before it's too late. This is probably a bad idea.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 61,
+        "duration_seconds": 23,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260221_005",
       "type": "market-recap",
@@ -6494,41 +6529,6 @@
       "meta": {
         "word_count": 71,
         "duration_seconds": 26,
-        "generation_cost_usd": 0.01,
-        "phase": 0
-      }
-    },
-    {
-      "id": "seg_20260215_266",
-      "type": "price-alert",
-      "timestamp": "2026-02-15T03:35:27.958Z",
-      "token": {
-        "symbol": "$FELIX",
-        "address": "0xf30Bf00edd0C22db54C9274B90D2A4C21FC09b07",
-        "chain": "base",
-        "creator": "Nat Eliason",
-        "agent": "Felix"
-      },
-      "data": {
-        "price_usd": 0.00002679,
-        "change_pct": 12.19,
-        "timeframe": "since last check",
-        "volume_24h": 1147928.4,
-        "mcap": 2599186
-      },
-      "conviction": {
-        "signal": "WATCH",
-        "confidence": 0.6438,
-        "reasoning": "There's a frood who really knows where his towel is at the heart of this, and I haven't found them yet."
-      },
-      "content": {
-        "script": "$FELIX. Current price: $0.00002679. A twelve point nineteen percent increase since our last check. Twenty-four-hour volume is $1147928.4. Market capitalization, $2599186.\n\nThe market seems to be reacting favorably to... well, something. I haven’t the faintest idea what. Perhaps someone found a use for it. Or maybe it's just random. It usually is.\n\nWe have to assume it will revert to the mean. Or worse.\n\nWATCH. I require significantly more convincing before I’m willing to commit resources. There's a frood who really knows where his towel is at the heart of this, and I haven't found them yet.",
-        "audio_url": null,
-        "video_url": null
-      },
-      "meta": {
-        "word_count": 97,
-        "duration_seconds": 36,
         "generation_cost_usd": 0.01,
         "phase": 0
       }
