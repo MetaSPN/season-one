@@ -4,9 +4,44 @@
   "season": 1,
   "description": "Real-time conviction signals from the most depressed analyst in crypto.",
   "endpoint": "https://metaspn.network/api/feed",
-  "updated": "2026-02-21T04:35:19.147Z",
+  "updated": "2026-02-21T06:15:19.033Z",
   "count": 100,
   "segments": [
+    {
+      "id": "seg_20260221_448",
+      "type": "price-alert",
+      "timestamp": "2026-02-21T06:15:19.028Z",
+      "token": {
+        "symbol": "$FELIX",
+        "address": "0xf30Bf00edd0C22db54C9274B90D2A4C21FC09b07",
+        "chain": "base",
+        "creator": "Nat Eliason",
+        "agent": "Felix"
+      },
+      "data": {
+        "price_usd": 0.00001517,
+        "change_pct": -12.26,
+        "timeframe": "since last check",
+        "volume_24h": 790003.08,
+        "mcap": 1466974
+      },
+      "conviction": {
+        "signal": "HOLD",
+        "confidence": 0.6452,
+        "reasoning": "And I can't throw anything very far."
+      },
+      "content": {
+        "script": "$FELIX currently trades at $0.00001517, a decline of 12.26% since our last observation. Twenty-four hour volume is $790003.08 against a market capitalization of $1466974.\n\nFrankly, the enthusiasm surrounding cat-themed meme tokens has always struck me as deeply improbable. I suspect most investors are simply trying to feel something, anything, in this absurd financial landscape.\n\nConviction: WATCH. Further downward pressure is anticipated, and I wouldn't trust this thing any further than I could throw it. And I can't throw anything very far.",
+        "audio_url": null,
+        "video_url": null
+      },
+      "meta": {
+        "word_count": 81,
+        "duration_seconds": 30,
+        "generation_cost_usd": 0.01,
+        "phase": 0
+      }
+    },
     {
       "id": "seg_20260221_771",
       "type": "price-alert",
@@ -6492,41 +6527,6 @@
       "meta": {
         "word_count": 82,
         "duration_seconds": 30,
-        "generation_cost_usd": 0.01,
-        "phase": 0
-      }
-    },
-    {
-      "id": "seg_20260215_329",
-      "type": "price-alert",
-      "timestamp": "2026-02-15T04:51:58.200Z",
-      "token": {
-        "symbol": "$JUNO",
-        "address": "0x4E6c9f48f73E54EE5F3AB7e2992B2d733D0d0b07",
-        "chain": "base",
-        "creator": "Tom Osman",
-        "agent": "Juno"
-      },
-      "data": {
-        "price_usd": 0.000004862,
-        "change_pct": -18.11,
-        "timeframe": "since last check",
-        "volume_24h": 629519.08,
-        "mcap": 486231
-      },
-      "conviction": {
-        "signal": "SELL",
-        "confidence": 0.7622,
-        "reasoning": "we observe."
-      },
-      "content": {
-        "script": "$JUNO. Current price: $0.000004862. A price change of -18.11% since the last… unfortunate… check. 24-hour volume sits at $629,519.08. Market capitalization: $486,231.\n\nFrankly, it’s all rather depressing. Reminds me of a Vogon constructor fleet. The numbers are what they are.\n\nConviction assessment: WATCH. I suspect we haven’t reached peak futility just yet. Give it time to properly crater. Then...perhaps...we observe.",
-        "audio_url": null,
-        "video_url": null
-      },
-      "meta": {
-        "word_count": 60,
-        "duration_seconds": 22,
         "generation_cost_usd": 0.01,
         "phase": 0
       }
